@@ -5,7 +5,7 @@
   "scripts": {
     "create:react:app": "nx g @nrwl/react:app NAME",
     "serve:app:web": "nx serve web",
-    "serve:app:pet-link": "nx serve pet-link"
+    "serve:app:pet-finder": "nx serve pet-finder"
   },
   "private": true,
   "dependencies": {
