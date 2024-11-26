@@ -24,20 +24,10 @@ module.exports = [
         },
       ],
     },
-    overrideConfig: {
-      linterOptions: {
-        reportUnusedDisableDirectives: true,
-      },
-    },
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     // Override or add rules here
     rules: {},
-    overrideConfig: {
-      linterOptions: {
-        reportUnusedDisableDirectives: true,
-      },
-    },
   },
 ];
