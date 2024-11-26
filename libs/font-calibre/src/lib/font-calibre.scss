@@ -1,0 +1,75 @@
+$fonts: (
+        (
+                weight: 100,
+                name: 'Calibre-Thin',
+                ext: (woff, woff2),
+        ),
+        (
+                weight: 300,
+                name: 'Calibre-Light',
+                ext: (woff, woff2),
+        ),
+        (
+                weight: 400,
+                name: 'Calibre-Regular',
+                ext: (woff, woff2),
+        ),
+        (
+                weight: 400,
+                name: 'Calibre-RegularItalic',
+                ext: (woff, woff2),
+                style: italic
+        ),
+        (
+                weight: 500,
+                name: 'Calibre-Medium',
+                ext: (woff, woff2),
+        ),
+        (
+                weight: 600,
+                name: 'Calibre-Semibold',
+                ext: (woff, woff2),
+        ),
+        (
+                weight: 700,
+                name: 'Calibre-Bold',
+                ext: (woff, woff2),
+        ),
+        (
+                weight: 900,
+                name: 'Calibre-Black',
+                ext: (woff, woff2),
+        ),
+);
+
+$fixDescend: false;
+$fixSize: true;
+
+@each $font in $fonts {
+  $name: map-get($font, name);
+  $fallback: if(map-has-key($font, fallback), map-get($font, fallback), null);
+  $style: if(map-has-key($font, style), map-get($font, style), normal);
+  $weight: map-get($font, weight);
+
+  $eot: if(index(map-get($font, ext), eot), $name, $fallback);
+  $woff: if(index(map-get($font, ext), woff), $name, $fallback);
+  $woff2: if(index(map-get($font, ext), woff2), $name, $fallback);
+  $ttf: if(index(map-get($font, ext), ttf), $name, $fallback);
+
+  @font-face {
+    font-family: Calibre;
+    src:
+            url('./#{$woff2}.woff2') format('woff2'),
+            url('./#{$woff}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    @if ($fixSize) {
+      size-adjust: 105%;
+    }
+    @if ($fixDescend) {
+      descent-override: 5%;
+    }
+
+  }
+}

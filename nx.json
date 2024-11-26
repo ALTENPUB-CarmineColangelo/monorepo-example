@@ -15,9 +15,18 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
+  "npmScope": "petlink-monorepo",
   "workspaceLayout": {
     "appsDir": "apps",
     "libsDir": "libs"
+  },
+  "projects": {
+    "web": {
+      "tags": []
+    },
+    "pet-finder": {
+      "tags": []
+    }
   },
   "nxCloudId": "6744a3c7cad9816b667b1245",
   "generators": {
@@ -33,7 +42,8 @@
       },
       "library": {
         "style": "scss",
-        "linter": "eslint"
+        "linter": "eslint",
+        "unitTestRunner": "none"
       }
     }
   },
