@@ -7,7 +7,9 @@ module.exports = {
   ],
   theme: {
     ...baseConfig.theme,
-    extend: {},
+    extend: {
+      ...baseConfig.theme.extend,
+    },
   },
   plugins: [],
 }

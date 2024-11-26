@@ -5,7 +5,11 @@ module.exports = {
     "./libs/**/*.{js,ts,jsx,tsx,scss}" // Percorso per eventuali librerie condivise
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        calibre: '"Calibre", Impact, Arial, sans-serif', // todo togliere impact
+      }
+    },
   },
   plugins: [],
 }
