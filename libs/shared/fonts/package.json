@@ -2,5 +2,10 @@
   "name": "@petlink-monorepo/fonts",
   "version": "0.0.1",
   "dependencies": {},
-  "private": true
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./font-calibre": "./font-calibre/index.ts",
+    "./font-larken": "./font-larken/index.ts"
+  }
 }

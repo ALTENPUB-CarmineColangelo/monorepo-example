@@ -5,6 +5,7 @@
   "scripts": {
     "create:app": "npx nx g app",
     "create:lib": "npx nx g lib",
+    "show:dep-graph": "nx dep-graph",
     "create:react:app": "nx g @nrwl/react:app nome-della-app",
     "delete:workspace:app": "nx g @nrwl/workspace:remove nome-della-app",
     "delete:workspace:lib": "nx g @nrwl/workspace:remove nome-della-library",
