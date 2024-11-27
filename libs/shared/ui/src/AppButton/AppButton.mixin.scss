@@ -1,0 +1,17 @@
+@mixin main() {
+  .app-button {
+    @content;
+  }
+}
+
+@mixin size($size: md) {
+  .app-button-size-#{$size} {
+    @content;
+  }
+}
+
+@mixin color($color: primary) {
+  .app-button-color-#{$color} {
+    @content;
+  }
+}

@@ -1,10 +1,12 @@
 import { Route, Routes, Link } from 'react-router-dom';
+import { AppButton } from '@petlink-monorepo/shared/ui';
 
 export function App() {
   return (
     <div>
       <h1 className="text-7xl font-thin font-calibre">Questa è l'app Pet Finder</h1>
-
+      <AppButton>Ciao</AppButton>
+      <AppButton color="secondary">Ciao</AppButton>
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}
@@ -26,8 +28,7 @@ export function App() {
           path="/"
           element={
             <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
+              This is the generated root route. <Link to="/page-2">Click here for page 2.</Link>
             </div>
           }
         />

@@ -14,10 +14,21 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "paths": {
       "@petlink-monorepo/fonts": ["libs/shared/fonts/index.ts"],
       "@petlink-monorepo/fonts/font-calibre": ["libs/shared/fonts/font-calibre/index.ts"],
       "@petlink-monorepo/fonts/font-larken": ["libs/shared/fonts/font-larken/index.ts"],
+      "@petlink-monorepo/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

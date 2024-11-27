@@ -1,0 +1,32 @@
+@use '../../../../../libs/shared/ui/src/AppButton/AppButton.mixin' as AppButton;
+
+@include AppButton.main() {
+  @apply inline-flex justify-center items-center text-center font-medium border border-transparent rounded-button disabled:cursor-not-allowed;
+}
+
+@include AppButton.size(md) {
+  @apply px-4 py-2 gap-2 text-base;
+}
+
+@include AppButton.color(primary) {
+  @apply bg-primary text-primary-foreground;
+  &:enabled:hover {
+    @apply bg-primary-hover text-primary-foreground-hover;
+  }
+  &:disabled {
+    @apply bg-primary-disabled text-primary-foreground-disabled;
+  }
+}
+
+@include AppButton.color(secondary) {
+  @apply bg-secondary text-secondary-foreground;
+  &:enabled:hover {
+    @apply bg-secondary-hover text-secondary-foreground-hover;
+  }
+  &:disabled {
+    @apply bg-secondary-disabled text-secondary-foreground-disabled;
+  }
+}
+
+
+
