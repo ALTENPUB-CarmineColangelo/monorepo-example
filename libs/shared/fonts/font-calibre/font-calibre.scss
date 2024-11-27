@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:map";
+
 $fonts: (
         (
                 weight: 100,
@@ -46,21 +49,21 @@ $fixDescend: false;
 $fixSize: true;
 
 @each $font in $fonts {
-  $name: map-get($font, name);
-  $fallback: if(map-has-key($font, fallback), map-get($font, fallback), null);
-  $style: if(map-has-key($font, style), map-get($font, style), normal);
-  $weight: map-get($font, weight);
+  $name: map.get($font, name);
+  $fallback: if(map.has-key($font, fallback), map.get($font, fallback), null);
+  $style: if(map.has-key($font, style), map.get($font, style), normal);
+  $weight: map.get($font, weight);
 
-  $eot: if(index(map-get($font, ext), eot), $name, $fallback);
-  $woff: if(index(map-get($font, ext), woff), $name, $fallback);
-  $woff2: if(index(map-get($font, ext), woff2), $name, $fallback);
-  $ttf: if(index(map-get($font, ext), ttf), $name, $fallback);
+  $eot: if(list.index(map.get($font, ext), eot), $name, $fallback);
+  $woff: if(list.index(map.get($font, ext), woff), $name, $fallback);
+  $woff2: if(list.index(map.get($font, ext), woff2), $name, $fallback);
+  $ttf: if(list.index(map.get($font, ext), ttf), $name, $fallback);
 
   @font-face {
     font-family: Calibre;
     src:
-            url('./lib/#{$woff2}.woff2') format('woff2'),
-            url('./lib/#{$woff}.woff') format('woff');
+            url('./src/#{$woff2}.woff2') format('woff2'),
+            url('./src/#{$woff}.woff') format('woff');
     font-weight: $weight;
     font-style: $style;
     font-display: swap;

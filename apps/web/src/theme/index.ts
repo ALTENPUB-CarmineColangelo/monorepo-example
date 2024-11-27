@@ -1,4 +1,4 @@
-export * from '@petlink-monorepo/font-calibre';
-export * from '@petlink-monorepo/font-larken';
+export * from '@petlink-monorepo/fonts/font-calibre';
+export * from '@petlink-monorepo/fonts/font-larken';
 
 export * from './styles.scss';
