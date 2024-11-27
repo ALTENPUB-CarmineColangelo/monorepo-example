@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "create:react:app": "nx g @nrwl/react:app NAME",
-    "create:workspace:lib": "nx g @nx/workspace:lib NAME",
-    "serve:app:web": "nx serve web",
-    "serve:app:pet-finder": "nx serve pet-finder"
+    "create:app": "npx nx g app",
+    "create:lib": "npx nx g lib",
+    "create:react:app": "nx g @nrwl/react:app nome-della-app",
+    "delete:workspace:app": "nx g @nrwl/workspace:remove nome-della-app",
+    "delete:workspace:lib": "nx g @nrwl/workspace:remove nome-della-library",
+    "start:app:web": "nx serve web",
+    "start:app:pet-finder": "nx serve pet-finder"
   },
   "private": true,
   "dependencies": {
