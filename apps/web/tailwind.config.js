@@ -9,6 +9,10 @@ module.exports = {
     ...baseConfig.theme,
     extend: {
       ...baseConfig.theme.extend,
+      fontFamily: {
+        ...baseConfig.theme.extend.fontFamily,
+        larken: '"larken", Arial, sans-serif',
+      }
     },
   },
   plugins: [],

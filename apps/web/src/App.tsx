@@ -4,7 +4,7 @@ export function App() {
   return (
     <div>
       <h1 className="text-7xl font-thin font-calibre">Questa è l'app Web</h1>
-
+      <h1 className="text-7xl font-bold font-larken">Welcome!</h1>
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}

@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@petlink-monorepo/font-calibre": ["libs/shared/fonts/font-calibre/src/index.ts"]
+      "@petlink-monorepo/font-calibre": ["libs/shared/fonts/font-calibre/src/index.ts"],
+      "@petlink-monorepo/font-larken": ["libs/shared/fonts/font-larken/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
