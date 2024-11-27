@@ -1,0 +1,9 @@
+{
+  "name": "font-larken",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/fonts/font-larken/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project font-larken --web",
+  "targets": {}
+}
